@@ -35,7 +35,7 @@ resource "aws_iam_role" "deployer" {
 
 
 data "aws_iam_policy" "ecr_power_user" {
-  arn = "arn:aws:iam::aws:policy/AmazonElasticContainerRegistryPublicPowerUser"
+  arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"
 }
 resource "aws_iam_role_policy_attachment" "role_deployer_policy_ecr_power_user" {
   role       = aws_iam_role.deployer.name
